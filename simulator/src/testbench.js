@@ -8,6 +8,7 @@ import { changeClockEnable } from './sequential';
 import { play } from './engine';
 import Scope from './circuit';
 import { showMessage, escapeHtml } from './utils';
+import { testResult } from './questionBank';
 
 /**
  * @typedef {number} RunContext
@@ -355,6 +356,7 @@ const buttonListenerFunctions = {
     },
 
     attachTestButton: () => {
+        //testResult();
         openCreator('create');
     },
 
@@ -634,7 +636,7 @@ function showValidationUI(validationErrors) {
  * @param {Object} data - Object containing Test Data
  * @param {Scope} scope - the circuit
  */
-function validate(data, scope) {
+export function validate(data, scope) {
     let invalids = [];
 
     // Check for duplicate identifiers
@@ -810,7 +812,7 @@ function validateOutputs(data, scope) {
  * @param {Object} data - Object containing Test Data
  * @param {Scope=} scope - the circuit
  */
-function bindIO(data, scope) {
+export function bindIO(data, scope) {
     const inputs = {};
     const outputs = {};
     let reset;

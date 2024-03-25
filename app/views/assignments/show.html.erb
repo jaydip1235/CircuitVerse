@@ -32,7 +32,7 @@
           <% if @assignment.description %>
             <p><strong><%= t("assignments.assignment_data.description") %> </strong></p>
             <div class="assignments-description">
-              <%= @assignment.description&.html_safe %>
+              <%= markdown(@assignment.description) %>
             </div>
           <% end %>
           <% if @assignment.restricted_circuit_elements != "None" %>

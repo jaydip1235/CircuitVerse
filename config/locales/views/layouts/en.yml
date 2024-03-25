@@ -2,6 +2,7 @@ en:
   layout:
     link_to_simulator: "Simulator"
     getting_started_dropdown: "Getting Started"
+    link_to_questions: "Questions"
     link_to_learn_more: "Learn"
     link_to_docs: "Documentation"
     link_to_features: "Features"
